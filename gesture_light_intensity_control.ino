@@ -33,10 +33,10 @@ const int BUZZER_PIN = 5;
 // ---------- Tunable constants ----------
 const float MIN_RANGE_CM   = 5.0;   // closest valid reading
 const float MAX_RANGE_CM   = 30.0;  // beyond this = "no hand" / idle
-const float STABLE_TOL_CM  = 3.5;   // allowed jitter during calibration hold
-const unsigned long HOLD_TIME_MS = 500; //0.5 sec stillness required to lock
+const float STABLE_TOL_CM  = 1.5;   // allowed jitter during calibration hold
+const unsigned long HOLD_TIME_MS = 2000; //0.5 sec stillness required to lock
 const float MOVEMENT_RANGE_CM = 15.0;    // 15cm movement = full 0-255 swing
-const int FILTER_SAMPLES = 8;            // moving average window size
+const int FILTER_SAMPLES = 5;            // moving average window size
 
 // ---------- State machine ----------
 enum State { IDLE, CALIBRATING, LOCKED, TRACKING };
